@@ -1,0 +1,20 @@
+<?php
+
+//calcular os 5 primeiros numeros primos.
+// Saida esperada: 2,3,5,7,11
+// utilizar operador de modulo % para pegar o resto da divisão
+
+$primos = [];
+$totalPrimos = 5;
+$contPrimos = 0;
+
+for ($divisor =0; $divisor <$totalPrimos; $divisor++) {
+    for ($num =0; $num <$totalPrimos; $i++) {
+        if ($isPrimo) {
+            $primos [] = $num;
+            $contPrimos++;
+        }
+} if ($contPrimos == $totalPrimos){
+    break;
+}
+}
