@@ -14,7 +14,8 @@ for ($divisor =0; $divisor <$totalPrimos; $divisor++) {
             $primos [] = $num;
             $contPrimos++;
         }
-} if ($contPrimos == $totalPrimos){
-    break;
-}
+    }   
+    if ($contPrimos == $totalPrimos){
+        break;
+    }
 }
