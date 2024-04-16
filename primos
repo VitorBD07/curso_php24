@@ -48,4 +48,4 @@ for ($num = 2; $contPrimos < $totalPrimos; $num++) {
 }
 
 
-echo implode(', ', $primos);
+echo implode(", ", $primos);
