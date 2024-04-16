@@ -19,3 +19,33 @@ for ($divisor =0; $divisor <$totalPrimos; $divisor++) {
         break;
     }
 }
+
+//////////////////////////////////////////////////////////////
+$primos = [];
+
+$totalPrimos = 5;
+
+$contPrimos = 0;
+
+for ($num = 2; $contPrimos < $totalPrimos; $num++) {
+    
+    $isPrimo = true;
+
+    
+    for ($divisor = 2; $divisor < $num; $divisor++) {
+        
+        if ($num % $divisor == 0) {
+            $isPrimo = false;
+            break;
+        }
+    }
+
+    
+    if ($isPrimo) {
+        $primos[] = $num;
+        $contPrimos++;
+    }
+}
+
+
+echo implode(', ', $primos);
