@@ -23,3 +23,33 @@ while ($count < 3) {
 }
 
 ?>
+
+
+<?php
+
+$perfeitos = [];
+
+$num = 1;
+
+while(count($perfeitos)< 4){
+
+    $divisores = 0;
+    
+    for ($divisor = 1; $divisor < $num; $divisor++) {
+        
+        if ($num % $divisor == 0) {
+            $divisores += $divisor;
+            
+        } 
+        
+    }
+    
+        if($divisores == $num) {
+            $perfeitos[] = $num; 
+            break;
+        }
+    
+    $num++;
+}
+
+echo implode(", ", $perfeitos);
