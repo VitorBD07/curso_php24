@@ -53,3 +53,40 @@ while(count($perfeitos)< 4){
 }
 
 echo implode(", ", $perfeitos);
+
+
+
+NOVO ----------------
+
+
+
+
+<?php
+
+$perfeitos = [];
+
+$num = 1;
+
+while(count($perfeitos)< 4){
+
+    $divisores = 0;
+    
+    for ($divisor = 1; $divisor < $num; $divisor++) {
+        
+        if ($num % $divisor == 0) {
+            $divisores += $divisor;
+            
+        } 
+        
+    }
+    
+        if($divisores == $num) {
+            $perfeitos[] = $num; 
+            
+        }
+    
+    $num++;
+}
+
+echo implode(", ", $perfeitos);
+
