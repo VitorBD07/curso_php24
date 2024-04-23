@@ -14,7 +14,7 @@ $count = 0;
 $num = 2; // Começamos com 2 porque 1 não é considerado um número perfeito
 
 echo "Os três primeiros números perfeitos são:\n";
-while ($count < 3) {
+while ($count < 4) {
     if (is_perfect_number($num)) {
         echo $num . "\n";
         $count++;
