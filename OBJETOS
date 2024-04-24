@@ -1,0 +1,37 @@
+<?php
+
+class "nome do arquivo" {
+    //propriedades = atributos
+    public $parede
+    public $janela
+    public $porta = ''
+    public $lampada
+
+    //funções = metodos
+    public function abrirPorta() {
+    if ($this->porta == 'fechada'){
+            echo "abrindo a porta";
+            $this->porta = 'aberta';
+    }
+    
+    public function fecharPorta(){
+        if ($this->porta == 'aberta'){
+            echo "fechando a porta";
+            $this->porta = 'fechada';
+    }
+    public function getStatusDaPorta (){
+        return $this->porta;
+    }
+    
+    public function ligarLampada(){
+        if($this->lampada == 'desligada'){
+            echo "ligando lampada";
+            $this->lampada = 'ligada';
+    }
+    public function desligarLampada(){
+        if($this->lampada == 'ligada')
+            echo "desligando lampada";
+            $this->lampada = 'desligada';
+    }
+    public function getStatusDaLampada (){
+        return $this->lampada;
