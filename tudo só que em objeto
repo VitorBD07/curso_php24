@@ -190,3 +190,40 @@ $numeronota = new Notas();
 
 $numeronota->valores();
 //
+
+
+<?php
+
+class Primos {
+    
+    public $primos = [];
+    
+    function Primos (){
+    
+        for($numero = 2; count($this->primos) < 5; $numero++) {
+            $isPrimo = true;
+        
+            for($divisor = 2; $divisor < $numero; $divisor++) {
+                $resto = $numero % $divisor;
+        
+                if ($resto == 0) {
+                    $isPrimo = false;
+                    break;
+                }
+            }
+        
+            if ($isPrimo) {
+                $this->primos[] = $numero;
+            }
+        }
+        
+        echo "Os números primos são: <br>";
+        
+        for($i = 0; $i < count($this->primos); $i++) {
+            echo $this->primos[$i] . " " ;
+        }
+    }   
+}
+
+$bla = new Primos();
+$bla-> Primos();
