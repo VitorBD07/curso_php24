@@ -1,0 +1,69 @@
+<?php
+
+class ContaBancaria {
+    public $saque;
+    public $deposito;
+    public $transferencia;
+    public $saldo
+    
+    public function __construct($saque, $deposito, $transferencia, $saldo)
+    {
+        $this_>saldo = $saldo
+        $this->saque = $saque;
+        $this->deposito = $deposito;
+        $this->transferencia = $transferencia;
+    }
+    public function getInfo(){
+        echo "{$this->saldo}: {$this->saque},{$this->deposito},{$this->transferencia}";
+    }
+    
+    public function Saldo(){
+        echo "dinheiro que que a conta possui";
+    }
+    
+    public function Saque(){
+        echo "dinheiro que a conta sacou";
+    }
+    public function deposito(){
+        echo "dinheiro que a conta depositou";
+    }
+    public function transferencia(){
+        echo "dinheiro que foi transferido na conta";
+    }
+}
+class Bradesco extends ContaBancaria{
+    
+    public function Saldo(){
+        echo "dinheiro que eu possuo no Bradesco";
+    }
+    
+    public function Saque(){
+        echo "dinheiro que eu saquei no Brasdesco";
+    }
+    public function deposito(){
+        echo "dinheiro que eu depositei no Bradesco";
+    }
+    public function transferencia(){
+        echo "dinheiro que foi transferido no Bradesco";
+    }
+}
+
+class Eu extends ContaBancaria {
+    
+     public function Saldo(){
+        echo "dinheiro que eu possuo";
+    }
+    
+    public function Saque(){
+        echo "dinheiro que eu saquei";
+    }
+    public function deposito(){
+        echo "dinheiro que eu depositei";
+    }
+    public function transferencia(){
+        echo "dinheiro que eu transferi";
+    }
+}
+
+$bancoBradesco = new Bradesco ('1000','250','500','250');
+$bancoBradesco->getInfo ();
