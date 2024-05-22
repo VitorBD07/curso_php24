@@ -1,0 +1,68 @@
+<?php
+ 
+ class ContaBancaria {
+     public $agencia = '00000';
+     public $conta = '0000000-00';
+     public $titular = '?????';
+     public $saldo = 0;
+     
+     public function saque ( $valor = 0) {
+         
+         $this->saldo = $this->saldo - $valor;
+     }
+     
+     public function transferencia ($valor = 0) {
+         
+         $this->saldo = $this->saldo - $valor;
+         
+         $transferencia = (
+             "valor a ser transferido: {$valor}\n
+             da conta: \n"  .
+             $this->getInfoConta()   .
+             "para a conta destinataria: \n"
+             $this->getInfoContaDestinatario() .
+             "O saldo atual ficou: {$this->saldo}"
+             );
+             
+             echo $transferencia;
+ }
+ 
+ public function exibirSaldo () {
+     echo "O saldo atual é R$: {$this->saldo}\n";
+ }
+ 
+ public function getInfoConta () {
+     echo "titular: {$this->Titular}\n  Agencia: {$this->agencia}\n CC: {$this->Conta}\n";
+ }
+ 
+public function getInfoContaDestinatario (){
+     echo "titular: {$this->Titular}\n  Agencia: {$this->agencia}\n CC: {$this->Conta}\n";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Bradesco extends ContaBancaria {
+    
+    public function setConta($titular, $agencia, $conta){
+        $this->titular = $titular;
+        $this->agencia = $agencia;
+        $this->conta = $conta;
+    } 
+}
+
+$banco = new Bradesco ();
+$banco->setconta ('Vitor','1234-5', '1234567-89');
+$banco->getInfoConta();
+$banco->exibirSaldo();
+$banco->saque(20);
